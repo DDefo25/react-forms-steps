@@ -14,7 +14,7 @@ export default function ListStep({step, onChange, onRemove}) {
     )
 }
 
-ListingSteps.propTypes = {
+ListStep.propTypes = {
     step: PropTypes.object,
     onChange: PropTypes.func,
     onRemove: PropTypes.func
