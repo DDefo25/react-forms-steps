@@ -6,12 +6,12 @@ function App() {
   const initialState = [
     {
         id: 1,
-        date: moment('20.07.2019', 'D.MM.YYYY').format('D.MM.YYYY'),
+        date: moment('20.07.2019', 'DD.MM.YYYY').format('D.MM.YYYY'),
         range: 5.7
     },
     {
         id: 2,
-        date: moment('19.07.2019', 'D.MM.YYYY').format('D.MM.YYYY'),
+        date: moment('19.07.2019', 'DD.MM.YYYY').format('D.MM.YYYY'),
         range: 14.2
     }
   ]

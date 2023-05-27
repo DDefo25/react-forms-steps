@@ -12,6 +12,7 @@ export default function ListingSteps({list, onChange, onRemove}) {
                 </tr>
             </thead>
             <tbody>
+
                 {list.map(step => <ListStep key={step.id} step={step} onChange={onChange} onRemove={onRemove} />)}
             </tbody>
         </table>

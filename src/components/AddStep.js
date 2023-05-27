@@ -10,7 +10,7 @@ export default function AddStep({onAddStep, form, setForm}) {
     const handleAddBook = (ev) => {
         ev.preventDefault();
         const step = {
-            date: moment(form.date, 'D.MM.YYYY').format('D.MM.YYYY'),
+            date: moment(form.date, 'DD.MM.YYYY').format('D.MM.YYYY'),
             range: Number(form.range)
         }
 

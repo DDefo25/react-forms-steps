@@ -3,6 +3,7 @@ import ListingSteps from "./ListingSteps"
 import {useState} from 'react'
 import { nanoid } from "nanoid";
 import PropTypes from 'prop-types'
+import moment from "moment";
 
 export default function StepsForm({initialState}) {
     const [list, setList] = useState(initialState)
@@ -26,7 +27,8 @@ export default function StepsForm({initialState}) {
         }
 
         setList(prevList => {
-            return [...prevList.filter(el => el.id !== step.id), step]
+            let newList = [...prevList.filter(el => el.id !== step.id), step]
+            return newList.sort((a, b) => moment(b.date, 'D.MM.YYYY').diff(moment(a.date, 'D.MM.YYYY')))
         })
     }
 
